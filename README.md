@@ -4,8 +4,6 @@ An Obsidian plugin that adds animated Matrix-style rain and adjusts your themeâ€
 
 ![Digital Rain Background in Obsidian](docs/media/digital-rain-demo.gif)
 
-[Video](docs/media/digital-rain-demo.mp4)
-
 ## Install
 
 Requires Obsidian **1.13.7+**.
