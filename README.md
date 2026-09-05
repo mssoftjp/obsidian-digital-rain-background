@@ -37,5 +37,3 @@ Release files are generated in `dist/`.
 ---
 
 [MIT](LICENSE) · Musashino Software
-
-Independent community plugin. Not affiliated with Obsidian.
