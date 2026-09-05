@@ -1,0 +1,10 @@
+# Local dependencies and generated release assets
+/node_modules/
+/dist/
+
+# Local capture vault and release QA notes
+/demo-vault/
+/RELEASE.md
+
+# macOS metadata
+.DS_Store

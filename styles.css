@@ -1,0 +1,170 @@
+.digital-rain-background-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  contain: strict;
+  background: #000302;
+  filter: blur(var(--digital-rain-blur, 0.68px));
+}
+
+.digital-rain-theme-probe {
+  position: fixed;
+  visibility: hidden;
+  background: var(--background-primary, #000805);
+}
+
+body.digital-rain-background-enabled {
+  --background-modifier-cover: rgb(0 0 0 / 0.68);
+  background: #000302;
+  color-scheme: dark;
+  --digital-rain-overlay-primary: #050c08;
+  --digital-rain-overlay-secondary: #0a1710;
+  --titlebar-background: #050c08;
+  --titlebar-background-focused: #050c08;
+  --setting-items-background: #050c08;
+  --background-modifier-border: rgb(90 166 122 / 0.28);
+  --background-modifier-border-hover: rgb(90 166 122 / 0.42);
+  --background-modifier-hover: rgb(56 130 87 / 0.24);
+  --background-modifier-active-hover: rgb(63 151 97 / 0.3);
+  --background-modifier-form-field: rgb(0 12 7 / 0.76);
+  --background-modifier-form-field-hover: rgb(9 36 22 / 0.9);
+  --interactive-normal: rgb(9 36 22 / 0.9);
+  --interactive-hover: rgb(16 55 34 / 0.92);
+  --interactive-accent: #2f9f62;
+  --input-text-bg-color: rgb(9 36 22 / 0.94);
+  --input-text-fg-color: #d7e6dc;
+  --input-unfocused-border-color: rgb(90 166 122 / 0.28);
+  --input-hover-border-color: rgb(90 166 122 / 0.42);
+  --input-focus-border-color: #2f9f62;
+  --input-focus-outline: 1px solid rgb(47 159 98 / 0.45);
+  --dropdown-background: rgb(9 36 22 / 0.94);
+  --dropdown-background-hover: rgb(16 55 34 / 0.96);
+  --divider-color: rgb(90 166 122 / 0.22);
+  --frame-divider-color: var(--divider-color);
+  --divider-color-hover: #2f9f62;
+  --tab-divider-color: rgb(90 166 122 / 0.28);
+  --tab-outline-color: rgb(90 166 122 / 0.22);
+  --hr-color: rgb(90 166 122 / 0.22);
+  --table-border-color: rgb(90 166 122 / 0.22);
+  --table-header-border-color: var(--table-border-color);
+  --table-selection: rgb(47 159 98 / 0.28);
+  --table-selection-blend-mode: normal;
+  --highlight-mix-blend-mode: normal;
+  --text-selection: rgb(47 159 98 / 0.32);
+  --text-normal: #d7e6dc;
+  --text-muted: #91aa9b;
+  --text-faint: #61796a;
+  --text-accent: #6be3a0;
+  --text-on-accent: #001c0e;
+  --color-red: #e93147;
+  --color-red-rgb: 233, 49, 71;
+  --color-orange: #ec7500;
+  --color-orange-rgb: 236, 117, 0;
+  --color-yellow: #e0ac00;
+  --color-yellow-rgb: 224, 172, 0;
+  --color-green: #08b94e;
+  --color-green-rgb: 8, 185, 78;
+  --color-cyan: #00bfbc;
+  --color-cyan-rgb: 0, 191, 188;
+  --color-blue: #086ddd;
+  --color-blue-rgb: 8, 109, 221;
+  --color-purple: #7852ee;
+  --color-purple-rgb: 120, 82, 238;
+  --color-pink: #d53984;
+  --color-pink-rgb: 213, 57, 132;
+  --code-background: #0a1710;
+  --code-normal: #d7e6dc;
+  --code-comment: #91aa9b;
+  --code-function: #a6ceb3;
+  --code-important: #e8d890;
+  --code-keyword: #c8b8ef;
+  --code-operator: #d7e6dc;
+  --code-property: #a6ceb3;
+  --code-punctuation: #91aa9b;
+  --code-string: #6be3a0;
+  --code-tag: #c8b8ef;
+  --code-value: #e8d890;
+}
+
+body.digital-rain-background-enabled :is(.app-container, .workspace) {
+  --background-primary: transparent;
+  --background-primary-alt: transparent;
+  --background-secondary: transparent;
+  --background-secondary-alt: transparent;
+  --titlebar-background: transparent;
+  --titlebar-background-focused: transparent;
+  --tab-container-background: transparent;
+  --frame-background: transparent;
+  --mobile-sidebar-background: transparent;
+  --ribbon-background: transparent;
+  --ribbon-background-collapsed: transparent;
+  --status-bar-background: transparent;
+  --tab-background: transparent;
+  --tab-background-active: transparent;
+}
+
+body.digital-rain-background-enabled.digital-rain-theme-minimal
+  :is(.app-container, .workspace) {
+  --bg1: transparent;
+  --bg2: transparent;
+  --bg3: transparent;
+}
+
+body.digital-rain-background-enabled.digital-rain-theme-minimal,
+body.digital-rain-background-enabled.digital-rain-theme-minimal
+  :is(.app-container, .workspace) {
+  --bg3: rgb(56 130 87 / 0.24);
+  --ui1: rgb(90 166 122 / 0.28);
+  --ui2: rgb(90 166 122 / 0.42);
+  --ui3: rgb(107 227 160 / 0.58);
+  --tx1: #d7e6dc;
+  --tx2: #91aa9b;
+  --tx3: #61796a;
+  --tx4: #a6ceb3;
+  --ax1: #6be3a0;
+  --ax2: #86efb1;
+  --ax3: #2f9f62;
+  --sp1: #001c0e;
+  --minimal-tab-text-color: var(--tx2);
+  --minimal-tab-text-color-active: var(--tx1);
+}
+
+body.digital-rain-background-enabled .app-container,
+body.digital-rain-background-enabled > .workspace {
+  position: relative;
+  z-index: 1;
+  background: rgb(0 8 5 / var(--digital-rain-surface-opacity, 0.84));
+}
+
+body.digital-rain-background-enabled .view-header {
+  background-color: transparent !important;
+}
+
+body.digital-rain-background-enabled
+  :is(
+    .modal,
+    .prompt,
+    .menu,
+    .popover,
+    .suggestion-container,
+    .graph-controls
+  ) {
+  --background-primary: var(--digital-rain-overlay-primary);
+  --background-primary-alt: var(--digital-rain-overlay-secondary);
+  --background-secondary: var(--digital-rain-overlay-secondary);
+  --background-secondary-alt: var(--digital-rain-overlay-primary);
+  --bg1: var(--digital-rain-overlay-primary);
+  --bg2: var(--digital-rain-overlay-secondary);
+  background-color: var(--digital-rain-overlay-primary);
+}
+
+body.digital-rain-background-enabled .modal.mod-settings .vertical-tab-header {
+  background-color: var(--digital-rain-overlay-secondary);
+}
+
+body.digital-rain-background-enabled
+  .modal.mod-settings
+  :is(.setting-items, .setting-item) {
+  background-color: transparent;
+}

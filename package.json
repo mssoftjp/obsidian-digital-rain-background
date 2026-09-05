@@ -1,0 +1,16 @@
+{
+  "name": "obsidian-digital-rain-background",
+  "version": "0.4.4",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "node esbuild.config.mjs",
+    "test": "npm run build && node --test test.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.0"
+  }
+}
