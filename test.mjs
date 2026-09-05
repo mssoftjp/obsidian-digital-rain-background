@@ -15,6 +15,8 @@ const readme = await readFile(new URL("README.md", root), "utf8");
 assert.equal(manifest.id, "digital-rain-background");
 assert.equal(manifest.name, "Digital Rain Background");
 assert.equal(manifest.isDesktopOnly, false);
+assert.doesNotMatch(styles, /!important/);
+assert.doesNotMatch(manifest.description, /obsidian/i);
 assert.equal(manifest.minAppVersion, "1.13.7");
 assert.equal(packageJson.version, manifest.version);
 assert.equal(versions[manifest.version], manifest.minAppVersion);
@@ -53,7 +55,6 @@ assert.match(
   /enabled :is\(\.app-container, \.workspace\) \{[\s\S]*--background-primary: transparent[\s\S]*--ribbon-background: transparent[\s\S]*--status-bar-background: transparent/,
 );
 assert.match(styles, /enabled > \.workspace \{/);
-assert.match(styles, /enabled \.view-header \{\s*background-color: transparent !important/);
 assert.doesNotMatch(
   styles.match(/body\.digital-rain-background-enabled \{[^}]+\}/)?.[0] || "",
   /--background-primary: transparent/,

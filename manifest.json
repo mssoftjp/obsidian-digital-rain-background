@@ -1,7 +1,7 @@
 {
   "id": "digital-rain-background",
   "name": "Digital Rain Background",
-  "version": "0.4.5",
+  "version": "0.4.6",
   "minAppVersion": "1.13.7",
   "description": "Adds animated Matrix-style rain and adjusts your theme’s colors and transparency to match.",
   "author": "Musashino Software",

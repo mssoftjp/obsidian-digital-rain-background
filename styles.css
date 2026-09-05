@@ -137,8 +137,8 @@ body.digital-rain-background-enabled > .workspace {
   background: rgb(0 8 5 / var(--digital-rain-surface-opacity, 0.84));
 }
 
-body.digital-rain-background-enabled .view-header {
-  background-color: transparent !important;
+body.digital-rain-background-enabled .workspace .workspace-leaf .view-header {
+  background-color: transparent;
 }
 
 body.digital-rain-background-enabled
